@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Start Header*@
+    @*
+    1- html Tags/ html Helpers
+    .net framework=> c# methods to generate html code
+    2- tag helpers
+    asp.net core feature
+
+    *@
+    <nav class="mt-5">
+        <center>
+            @* <a class="btn btn-primary" href="/Home/Index">Home</a>
+            @Html.ActionLink("Home", "Index", "Home", null, new {@class="btn btn-secondary"}) *@@*html tags*@
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a> @*tag helpers*@
+            <a class="btn btn-secondary" href="/Home/AboutUs">AboutUs</a>
+            <a class="btn btn-success" href="/Home/Privacy">Privacy</a>
+            <a class="btn btn-warning" href="/Home/ContactUs">ContactUs</a>
+            <a class="btn btn-danger" href="/Account/Login">Login</a>
+            <a class="btn btn-info" href="/Account/Register">Register</a>
+        </center>
+    </nav>
+    @* End Header*@
+    <div>
+        @RenderBody()
+    </div>
+    @*Start Footer*@
+    <center>
+        <div>
+            <p> CopyRights &copy; Route @DateTime.Now.Year</p>
+        </div>
+    </center>
+    @*End Footer*@
+</body>
+</html>
